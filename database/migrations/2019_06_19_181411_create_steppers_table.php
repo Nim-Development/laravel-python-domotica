@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActionsTable extends Migration
+class CreateSteppersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateActionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actions', function (Blueprint $table) {
+        Schema::create('steppers', function (Blueprint $table) {
             $table->bigIncrements('id');
-                $table->integer('user_id');
-                $table->integer('type');
+                $table->integer('status');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateActionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actions');
+        Schema::dropIfExists('steppers');
     }
 }

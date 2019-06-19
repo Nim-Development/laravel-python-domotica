@@ -19,3 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('relays', 'Api\RelayController@get_relays');
 Route::get('relay/{action}/{id}', 'Api\RelayController@relay');
+
+Route::get('servos', 'Api\ServoController@get_servos');
+Route::get('servo/{action}/{id}/{rotate?}', 'Api\ServoController@servo');
+
+Route::get('steppers', 'Api\StepperController@get_steppers');
+Route::get('stepper/{action}/{id}', 'Api\StepperController@stepper');

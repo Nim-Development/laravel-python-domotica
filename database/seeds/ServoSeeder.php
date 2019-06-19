@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class ActionSeeder extends Seeder
+class ServoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +11,6 @@ class ActionSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Action::class, 30)->create();
+        factory(App\Servo::class, 8)->create();
     }
 }

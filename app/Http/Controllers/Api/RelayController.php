@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 
 use App\Relay;
 use App\Http\Resources\RelaysResource;
-use App\Http\Resources\RelayErrorResource;
 
 class RelayController extends Controller
 {
